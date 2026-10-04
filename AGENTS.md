@@ -35,6 +35,9 @@ Naming and placement rules:
 - If references are supplied only as names or links, place `LIBRARY.md` at the repository root without creating `library`.
 - If a reference list or links are accompanied by book files, place `LIBRARY.md` at the repository root and the files inside `library`. Use a bibliography table with name and source columns.
 
+- This course has exactly seven practices, corresponding to Moodle sections 2349981–2349987 in source order. Keep the seven existing practice directories. Treat УДОВЛ, ХОР, and ОТЛ as assessment variants within the same practice; do not create separate variant or test practice directories. Keep quiz links in `COURSE.md`.
+- Keep `README.md` limited to two headings: a Russian H1 with the exact course name from Moodle and an English H2 expanding the course code without the academic year or enrolment mode.
+
 - Preserve the completed notebooks for practices 1–3 alongside the original assignment notebooks. Their `БабушкинМВ` filename suffix identifies solution artifacts. Preserve the accompanying modules, datasets, and relative imports.
 
 ## Export & Metadata
@@ -48,6 +51,8 @@ Start every `COURSE.md` and `TASK.md` with YAML frontmatter delimited by `---`. 
 | `code`   | Approved course directory name for a course card, or the containing practice directory name for an assignment card. |
 | `origin` | Canonical LMS URL of the exported course page or assignment.                                                        |
 
+- For this course, each `TASK.md` represents an entire Moodle section: use its exact title for `ru` and its canonical `/course/section.php?id=...` URL for `origin`. Export the section summary, educational element names and links, descriptions, and assessment variants together in source order.
+- Remove HTML comments from filled Markdown files; filling instructions belong in the template and operational rules in `AGENTS.md`.
 - Preserve already confirmed metadata values. Translate names for `en` and directory naming; retain the source language in exported descriptions.
 - Empty strings are placeholders in the template only. Fill every field from confirmed source data when creating a course; keep `code` equal to the actual course or practice directory name.
 - Copy educational text completely and in source order. Convert HTML to readable Markdown while preserving paragraphs, lists, emphasis, and working links.
