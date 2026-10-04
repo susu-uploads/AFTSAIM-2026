@@ -1,8 +1,8 @@
 ---
-ru: "Цепочки-УДОВЛ"
-en: "Chains — Satisfactory"
-code: "practice-6-chains"
-origin: "https://edu.susu.ru/mod/assign/view.php?id=8719893"
+ru: "Диссонансы-ХОР"
+en: "Discords — Good"
+code: "practice-3-discords-good"
+origin: "https://edu.susu.ru/mod/assign/view.php?id=8719871"
 ---
 
 <!--
@@ -25,5 +25,5 @@ origin: "https://edu.susu.ru/mod/assign/view.php?id=8719893"
 Если источник недоступен, сохраните существующую выгрузку и сообщите об ограничении; не придумывайте недостающие сведения.
 -->
 
-**Сложность задания:** низкая (на оценку "удовлетворительно")
-**Время выполнения:** 0.5-1 час
+**Сложность задания:** средняя (на оценку "хорошо")
+**Время выполнения:** 1-1.5 час

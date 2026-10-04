@@ -1,8 +1,8 @@
 ---
-ru: "Цепочки-УДОВЛ"
-en: "Chains — Satisfactory"
-code: "practice-6-chains"
-origin: "https://edu.susu.ru/mod/assign/view.php?id=8719893"
+ru: "Восстановление Прогноз-ХОР"
+en: "Imputation and Forecast — Good"
+code: "practice-7-imputation-and-forecast-good"
+origin: "https://edu.susu.ru/mod/assign/view.php?id=8719904"
 ---
 
 <!--
@@ -25,5 +25,5 @@ origin: "https://edu.susu.ru/mod/assign/view.php?id=8719893"
 Если источник недоступен, сохраните существующую выгрузку и сообщите об ограничении; не придумывайте недостающие сведения.
 -->
 
-**Сложность задания:** низкая (на оценку "удовлетворительно")
-**Время выполнения:** 0.5-1 час
+**Сложность задания:** средняя (на оценку "хорошо")
+**Время выполнения:** 2-2.5 час

@@ -1,6 +1,6 @@
 ---
-ru: "Практика 4 - Матричный профиль ряда"
-en: "Matrix Profile"
+ru: "Матричный профиль-УДОВЛ"
+en: "Matrix Profile — Satisfactory"
 code: "practice-4-matrix-profile"
 origin: "https://edu.susu.ru/mod/assign/view.php?id=8719877"
 ---
@@ -25,20 +25,5 @@ origin: "https://edu.susu.ru/mod/assign/view.php?id=8719877"
 Если источник недоступен, сохраните существующую выгрузку и сообщите об ограничении; не придумывайте недостающие сведения.
 -->
 
-### [УДОВЛ](https://edu.susu.ru/mod/assign/view.php?id=8719877)
-
-**Сложность задания:** низкая (на оценку "удовлетворительно")
-**Время выполнения:** 0.5-1 час
-
-### [ХОР](https://edu.susu.ru/mod/assign/view.php?id=8719879)
-
-**Сложность задания:** средняя (на оценку "хорошо")
-**Время выполнения:** 1-1.5 час
-
-### [ОТЛ](https://edu.susu.ru/mod/assign/view.php?id=8719881)
-
-**Сложность задания:** высокая (на оценку "отлично")
-**Время выполнения:** 1.5-2 час
-
-- [Материалы для практической работы](https://github.com/mzym/TimeSeriesCourse/tree/main/practice/04%20Matrix%20profile)
-- [Исходный ноутбук](https://github.com/mzym/TimeSeriesCourse/blob/main/practice/04%20Matrix%20profile/04%20Matrix%20profile.ipynb)
+**Сложность задания:** низкая (на оценку "удовлетворительно")
+**Время выполнения:** 0.5-1 час

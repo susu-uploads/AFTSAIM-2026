@@ -1,6 +1,6 @@
 ---
-ru: "Практика 7 - Восстановление и прогноз"
-en: "Imputation and Forecast"
+ru: "Восстановление Прогноз-УДОВЛ"
+en: "Imputation and Forecast — Satisfactory"
 code: "practice-7-imputation-and-forecast"
 origin: "https://edu.susu.ru/mod/assign/view.php?id=8719902"
 ---
@@ -25,20 +25,5 @@ origin: "https://edu.susu.ru/mod/assign/view.php?id=8719902"
 Если источник недоступен, сохраните существующую выгрузку и сообщите об ограничении; не придумывайте недостающие сведения.
 -->
 
-### [УДОВЛ](https://edu.susu.ru/mod/assign/view.php?id=8719902)
-
-**Сложность задания:** низкая (на оценку "удовлетворительно")
-**Время выполнения:** 1.5-2 час
-
-### [ХОР](https://edu.susu.ru/mod/assign/view.php?id=8719904)
-
-**Сложность задания:** средняя (на оценку "хорошо")
-**Время выполнения:** 2-2.5 час
-
-### [ОТЛ](https://edu.susu.ru/mod/assign/view.php?id=8719906)
-
-**Сложность задания:** высокая (на оценку "отлично")
-**Время выполнения:** 3-4 час
-
-- [Материалы для практической работы](https://github.com/mzym/TimeSeriesCourse/tree/main/practice/07%20Imputation%20and%20Forecast)
-- [Исходный ноутбук](https://github.com/mzym/TimeSeriesCourse/blob/main/practice/07%20Imputation%20and%20Forecast/07%20Imputation%20and%20Forecast.ipynb)
+**Сложность задания:** низкая (на оценку "удовлетворительно")
+**Время выполнения:** 1.5-2 час

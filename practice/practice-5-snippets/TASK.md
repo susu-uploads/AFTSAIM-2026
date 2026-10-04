@@ -1,6 +1,6 @@
 ---
-ru: "Практика 5 - Поиск сниппетов"
-en: "Snippets"
+ru: "Сниппеты-УДОВЛ"
+en: "Snippets — Satisfactory"
 code: "practice-5-snippets"
 origin: "https://edu.susu.ru/mod/assign/view.php?id=8719885"
 ---
@@ -25,20 +25,5 @@ origin: "https://edu.susu.ru/mod/assign/view.php?id=8719885"
 Если источник недоступен, сохраните существующую выгрузку и сообщите об ограничении; не придумывайте недостающие сведения.
 -->
 
-### [УДОВЛ](https://edu.susu.ru/mod/assign/view.php?id=8719885)
-
-**Сложность задания:** низкая (на оценку "удовлетворительно")
-**Время выполнения:** 0.5-1 час
-
-### [ХОР](https://edu.susu.ru/mod/assign/view.php?id=8719887)
-
-**Сложность задания:** средняя (на оценку "хорошо")
-**Время выполнения:** 1-1.5 час
-
-### [ОТЛ](https://edu.susu.ru/mod/assign/view.php?id=8719889)
-
-**Сложность задания:** средняя (на оценку "отлично")
-**Время выполнения:** 1.5-2 час
-
-- [Материалы для практической работы](https://github.com/mzym/TimeSeriesCourse/tree/main/practice/05%20Snippets)
-- [Исходный ноутбук](https://github.com/mzym/TimeSeriesCourse/blob/main/practice/05%20Snippets/05%20Snippets.ipynb)
+**Сложность задания:** низкая (на оценку "удовлетворительно")
+**Время выполнения:** 0.5-1 час

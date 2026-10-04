@@ -1,8 +1,8 @@
 ---
-ru: "Цепочки-УДОВЛ"
-en: "Chains — Satisfactory"
-code: "practice-6-chains"
-origin: "https://edu.susu.ru/mod/assign/view.php?id=8719893"
+ru: "Поиск по образцу"
+en: "Similarity Search"
+code: "practice-9-similarity-search-test"
+origin: "https://edu.susu.ru/mod/quiz/view.php?id=8719909"
 ---
 
 <!--
@@ -24,6 +24,3 @@ origin: "https://edu.susu.ru/mod/assign/view.php?id=8719893"
 При повторной выгрузке сохраняйте вложения, решения, имена файлов и структуру каталогов.
 Если источник недоступен, сохраните существующую выгрузку и сообщите об ограничении; не придумывайте недостающие сведения.
 -->
-
-**Сложность задания:** низкая (на оценку "удовлетворительно")
-**Время выполнения:** 0.5-1 час

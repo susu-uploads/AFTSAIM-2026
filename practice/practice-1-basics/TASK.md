@@ -1,6 +1,6 @@
 ---
-ru: "Практика 1 - Базовые понятия"
-en: "Basics"
+ru: "Базис-УДОВЛ"
+en: "Basics — Satisfactory"
 code: "practice-1-basics"
 origin: "https://edu.susu.ru/mod/assign/view.php?id=8719853"
 ---
@@ -25,20 +25,5 @@ origin: "https://edu.susu.ru/mod/assign/view.php?id=8719853"
 Если источник недоступен, сохраните существующую выгрузку и сообщите об ограничении; не придумывайте недостающие сведения.
 -->
 
-### [УДОВЛ](https://edu.susu.ru/mod/assign/view.php?id=8719853)
-
-**Сложность задания:** низкая (на оценку "удовлетворительно")
-**Время выполнения:** 0.5-1 час
-
-### [ХОР](https://edu.susu.ru/mod/assign/view.php?id=8719855)
-
-**Сложность задания:** средняя (на оценку "хорошо")
-**Время выполнения:** 1-1.5 час
-
-### [ОТЛ](https://edu.susu.ru/mod/assign/view.php?id=8719857)
-
-**Сложность задания:** высокая (на оценку "отлично")
-**Время выполнения:** 1.5-2 час
-
-- [Материалы для практической работы](https://github.com/mzym/TimeSeriesCourse/tree/main/practice/01%20Basics)
-- [Исходный ноутбук](https://github.com/mzym/TimeSeriesCourse/blob/main/practice/01%20Basics/01%20Basics.ipynb)
+**Сложность задания:** низкая (на оценку "удовлетворительно")
+**Время выполнения:** 0.5-1 час

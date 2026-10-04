@@ -1,6 +1,6 @@
 ---
-ru: "Практика 2 - Поиск по образцу"
-en: "Similarity Search"
+ru: "Поиск по образцу-УДОВЛ"
+en: "Similarity Search — Satisfactory"
 code: "practice-2-similarity-search"
 origin: "https://edu.susu.ru/mod/assign/view.php?id=8719861"
 ---
@@ -25,20 +25,5 @@ origin: "https://edu.susu.ru/mod/assign/view.php?id=8719861"
 Если источник недоступен, сохраните существующую выгрузку и сообщите об ограничении; не придумывайте недостающие сведения.
 -->
 
-### [УДОВЛ](https://edu.susu.ru/mod/assign/view.php?id=8719861)
-
-**Сложность задания:** низкая (на оценку "удовлетворительно")
-**Время выполнения:** 0.5-1 час
-
-### [ХОР](https://edu.susu.ru/mod/assign/view.php?id=8719863)
-
-**Сложность задания:** средняя (на оценку "хорошо")
-**Время выполнения:** 1-1.5 час
-
-### [ОТЛ](https://edu.susu.ru/mod/assign/view.php?id=8719865)
-
-**Сложность задания:** высокая (на оценку "отлично")
-**Время выполнения:** 1.5-2 час
-
-- [Материалы для практической работы](https://github.com/mzym/TimeSeriesCourse/tree/main/practice/02%20Similarity%20search)
-- [Исходный ноутбук](https://github.com/mzym/TimeSeriesCourse/blob/main/practice/02%20Similarity%20search/02%20Similarity%20search.ipynb)
+**Сложность задания:** низкая (на оценку "удовлетворительно")
+**Время выполнения:** 0.5-1 час

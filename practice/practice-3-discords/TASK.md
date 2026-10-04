@@ -1,6 +1,6 @@
 ---
-ru: "Практика 3 - Поиск диссонансов"
-en: "Discords"
+ru: "Диссонансы-УДОВЛ"
+en: "Discords — Satisfactory"
 code: "practice-3-discords"
 origin: "https://edu.susu.ru/mod/assign/view.php?id=8719869"
 ---
@@ -25,20 +25,5 @@ origin: "https://edu.susu.ru/mod/assign/view.php?id=8719869"
 Если источник недоступен, сохраните существующую выгрузку и сообщите об ограничении; не придумывайте недостающие сведения.
 -->
 
-### [УДОВЛ](https://edu.susu.ru/mod/assign/view.php?id=8719869)
-
-**Сложность задания:** низкая (на оценку "удовлетворительно")
-**Время выполнения:** 0.5-1 час
-
-### [ХОР](https://edu.susu.ru/mod/assign/view.php?id=8719871)
-
-**Сложность задания:** средняя (на оценку "хорошо")
-**Время выполнения:** 1-1.5 час
-
-### [ОТЛ](https://edu.susu.ru/mod/assign/view.php?id=8719873)
-
-**Сложность задания:** высокая (на оценку "отлично")
-**Время выполнения:** 1.5-2 час
-
-- [Материалы для практической работы](https://github.com/mzym/TimeSeriesCourse/tree/main/practice/03%20Discords)
-- [Исходный ноутбук](https://github.com/mzym/TimeSeriesCourse/blob/main/practice/03%20Discords/03%20Discords.ipynb)
+**Сложность задания:** низкая (на оценку "удовлетворительно")
+**Время выполнения:** 0.5-1 час
