@@ -11,7 +11,7 @@ import plotly.express as px
 plotly.offline.init_notebook_mode(connected=True)
 
 
-def plot_ts(ts: np.ndarrray, title: str = 'Input Time Series') -> None:
+def plot_ts(ts: np.ndarray, title: str = 'Input Time Series') -> None:
     """
     Plot the time series
 
@@ -52,7 +52,7 @@ def plot_ts(ts: np.ndarrray, title: str = 'Input Time Series') -> None:
                       legend=dict(font=dict(size=20, color='black'))
                       )
 
-    fig.show(renderer="colab")
+    fig.show(renderer="plotly_mimetype+notebook_connected")
 
 
 
@@ -86,13 +86,14 @@ def plot_motifs(mp: dict, top_k_motifs: dict) -> None:
     for i in range(top_k):
         left_motif_idx = top_k_motifs['indices'][i][0]
         right_motif_idx = top_k_motifs['indices'][i][1]
-        x = np.arange(left_motif_idx, right_motif_idx+m)
-        num_values_between_motif = right_motif_idx - (left_motif_idx+m)
-        y = np.concatenate((mp['data']['ts1'][left_motif_idx:left_motif_idx+m], np.full([1, num_values_between_motif], np.nan)[0], mp['data']['ts1'][right_motif_idx:right_motif_idx+m]))
+        x = np.r_[np.arange(left_motif_idx, left_motif_idx + m), np.nan,
+                  np.arange(right_motif_idx, right_motif_idx + m)]
+        y = np.r_[mp['data']['ts1'][left_motif_idx:left_motif_idx + m], np.nan,
+                  mp['data']['ts1'][right_motif_idx:right_motif_idx + m]]
         color_i = i % len(px.colors.qualitative.Plotly)
         fig.add_trace(go.Scatter(x=x, y=y, name=f"Top-{i+1} motifs", line=dict(color=px.colors.qualitative.Plotly[color_i])), row=1, col=1) #line=dict(color=px.colors.qualitative.Plotly[i+1])
 
-    fig.add_trace(go.Scatter(x=np.arange(n), y=mp['mp'], line=dict(color='grey', width=2), name="Matrix Profile"), row=2, col=1)
+    fig.add_trace(go.Scatter(x=np.arange(len(mp['mp'])), y=mp['mp'], line=dict(color='grey', width=2), name="Matrix Profile"), row=2, col=1)
 
     for i in range(top_k):
         motifs_mp = [mp['mp'][motif_idx] for motif_idx in top_k_motifs['indices'][i]]
@@ -133,7 +134,7 @@ def plot_motifs(mp: dict, top_k_motifs: dict) -> None:
                       paper_bgcolor='rgba(0,0,0,0)', 
                       height=1300)
 
-    fig.show(renderer="colab")
+    fig.show(renderer="plotly_mimetype+notebook_connected")
 
 
 def plot_discords(mp: dict, top_k_discords: dict) -> None:
@@ -165,7 +166,7 @@ def plot_discords(mp: dict, top_k_discords: dict) -> None:
     discords_idx = top_k_discords['indices']
     discords_mp = [mp['mp'][discord_idx] for discord_idx in discords_idx]
 
-    fig.add_trace(go.Scatter(x=np.arange(n), y=mp['mp'], line=dict(color='#636EFA', width=2), name="Matrix Profile"), row=2, col=1)
+    fig.add_trace(go.Scatter(x=np.arange(len(mp['mp'])), y=mp['mp'], line=dict(color='#636EFA', width=2), name="Matrix Profile"), row=2, col=1)
     fig.add_trace(go.Scatter(x=discords_idx, y=discords_mp, mode='markers', marker=dict(symbol='star', color='red', size=7), name="Discords"), row=2, col=1)
 
     fig.update_layout(title_text="Top-k discords in time series")
@@ -190,7 +191,7 @@ def plot_discords(mp: dict, top_k_discords: dict) -> None:
                       plot_bgcolor="rgba(0,0,0,0)",
                       paper_bgcolor='rgba(0,0,0,0)')
 
-    fig.show(renderer="colab")
+    fig.show(renderer="plotly_mimetype+notebook_connected")
 
 
 def plot_segmentation(mp: dict, threshold: float) -> None:
@@ -211,7 +212,13 @@ def plot_segmentation(mp: dict, threshold: float) -> None:
                         subplot_titles=("The segmented time series", "Matrix Profile"))
 
     fig.add_trace(go.Scatter(x=np.arange(n), y=mp['data']['ts1'], line=dict(color='#636EFA'), name="Time Series", showlegend = False), row=1, col=1)
-    fig.add_trace(go.Scatter(x=np.arange(n), y=mp['mp'], line=dict(color='#636EFA', width=2), name="Matrix Profile", showlegend = False), row=2, col=1)
+    fig.add_trace(go.Scatter(x=np.arange(len(mp['mp'])), y=mp['mp'], line=dict(color='#636EFA', width=2), name="Matrix Profile", showlegend = False), row=2, col=1)
+
+    centers = np.arange(len(mp['mp'])) + mp['m'] // 2
+    stairs = np.isfinite(mp['mp']) & (mp['mp'] < threshold)
+    fig.add_trace(go.Scatter(x=centers[stairs], y=mp['data']['ts1'][centers[stairs]],
+                             mode='markers', marker=dict(size=2, color='orange'),
+                             name='Лестница (по порогу)'), row=1, col=1)
 
     fig.add_hline(y=threshold, line_width=3, line_dash="dash", line_color="red", row=2, col=1)
 
@@ -236,4 +243,4 @@ def plot_segmentation(mp: dict, threshold: float) -> None:
                       plot_bgcolor="rgba(0,0,0,0)",
                       paper_bgcolor='rgba(0,0,0,0)', height=700)
 
-    fig.show(renderer="colab")
+    fig.show(renderer="plotly_mimetype+notebook_connected")

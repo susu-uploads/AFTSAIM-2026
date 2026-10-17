@@ -11,7 +11,7 @@ plotly.offline.init_notebook_mode(connected=True)
 from modules.mp import *
 
 
-def heads_tails(consumptions: dict, cutoff, house_idx: list) -> dict, dict:
+def heads_tails(consumptions: dict, cutoff, house_idx: list) -> tuple[dict, dict]:
     """
     Split time series into two parts: Head and Tail
 
@@ -57,6 +57,30 @@ def meter_swapping_detection(heads: dict, tails: dict, house_idx: dict, m: int) 
     min_score = {}
 
     # INSERT YOUR CODE
+
+    baseline = {}
+    for i in house_idx:
+        profile = compute_mp(heads[f'H_{i}'].to_numpy().ravel(), m,
+                             ts2=tails[f'T_{i}'].to_numpy().ravel())
+        finite = profile['mp'][np.isfinite(profile['mp'])]
+        if not len(finite):
+            raise ValueError(f"House {i} has no finite baseline distances")
+        baseline[i] = float(np.min(finite))
+
+    for i in house_idx:
+        for j in house_idx:
+            if i == j:
+                continue
+            profile = compute_mp(heads[f'H_{i}'].to_numpy().ravel(), m,
+                                 ts2=tails[f'T_{j}'].to_numpy().ravel())
+            finite = profile['mp'][np.isfinite(profile['mp'])]
+            if not len(finite):
+                continue
+            score = float(np.min(finite)) / (baseline[i] + eps)
+            if not min_score or score < min_score['score']:
+                min_score = {'i': i, 'j': j, 'score': score, 'mp_j': profile}
+    if not min_score:
+        raise ValueError("No pair of different houses has finite comparison distances")
     
     return min_score
 
@@ -109,4 +133,4 @@ def plot_consumptions_ts(consumptions: dict, cutoff, house_idx: list):
                       legend=dict(font=dict(size=20, color='black'))
                       )
 
-    fig.show(renderer="colab")
+    fig.show(renderer="plotly_mimetype+notebook_connected")
