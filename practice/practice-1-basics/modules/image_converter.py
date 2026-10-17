@@ -20,7 +20,7 @@ class Image2TimeSeries:
 
     def _img_preprocess(self, img: np.ndarray) -> np.ndarray:
         """
-        Preprocess the raw image: convert to grayscale, inverse, blur slightly, and threshold it
+        Preprocess the raw image: inverse, blur, threshold, opening, and median filtering
         
         Parameters
         ----------
@@ -31,17 +31,30 @@ class Image2TimeSeries:
         prep_img: image after preprocessing
         """
 
-        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-        inverse = cv2.bitwise_not(gray)
-        blur = cv2.GaussianBlur(inverse, (5, 5), 0)
-        _, prep_img = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+        # INSERT YOUR CODE
+        # Инверсия изображения
+        inverted_img = cv2.bitwise_not(img)
+
+        # Размытие изображения
+        blurred_img = cv2.GaussianBlur(inverted_img, (5, 5), 0)
+
+        # Бинаризация изображения
+        _, binary_img = cv2.threshold(blurred_img, 127, 255, cv2.THRESH_BINARY)
+
+        # Морфологические операции
+        kernel = np.ones((5, 5), np.uint8)
+        eroded_img = cv2.erode(binary_img, kernel, iterations=1)
+        dilated_img = cv2.dilate(eroded_img, kernel, iterations=1)
+
+        # Медианная фильтрация
+        prep_img = cv2.medianBlur(dilated_img, 5)
 
         return prep_img
 
 
     def _get_contour(self, img: np.ndarray) -> np.ndarray:
         """
-        Find the largest contour in the preprocessed image
+        Find the first contour with area greater than 500 pixels in the preprocessed image
 
         Parameters
         ----------
@@ -52,8 +65,14 @@ class Image2TimeSeries:
         contour: object contour
         """
 
+        if img.ndim == 3:
+            img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         contours, hierarchy = cv2.findContours(img.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-        contour = max(contours, key=cv2.contourArea)
+        candidates = [cnt for cnt in contours if cv2.contourArea(cnt) > 500]
+        if not candidates:
+            raise ValueError("Image has no contour with area greater than 500 pixels")
+        # Match the contour selection used in the imported experiment.
+        contour = candidates[0]
 
         return contour
 
