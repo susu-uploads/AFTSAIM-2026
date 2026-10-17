@@ -18,3 +18,8 @@ mass-ts==0.1.4
 # Практика 3
 stumpy==1.11.1
 setuptools==80.9.0
+
+# Практика 7
+torch==2.14.1
+pypots==1.5
+statsmodels==0.15.0
